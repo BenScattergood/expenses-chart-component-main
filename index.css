@@ -1,0 +1,182 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft red: hsl(10, 79%, 65%)
+- Cyan: hsl(186, 34%, 60%)
+
+### Neutral
+
+- Dark brown: hsl(25, 47%, 15%)
+- Medium brown: hsl(28, 10%, 53%)
+- Cream: hsl(27, 66%, 92%)
+- Very pale orange: hsl(33, 100%, 98%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Font
+
+- Family: [DM Sans](https://fonts.google.com/specimen/DM+Sans)
+- Weights: 400, 700 */
+
+:root {
+    --softRed: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+
+    --darkBrown: hsl(25, 47%, 15%);
+    --MediumBrown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --veryPaleOrange: hsl(33, 100%, 98%);
+}
+
+body {
+    font-family: 'Dm Sans', sans-serif;
+    background-color: var(--Cream);
+    max-width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: 1rem;
+    width: 350px;
+}
+
+header {
+    background-color: var(--softRed);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    
+}
+
+.balanceWrapper {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.hidden {
+    display: none;
+}
+
+.balanceHeader {
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.balanceValue {
+    color: white;
+    font-weight: 700;
+}
+
+#mainContent {
+    background-color: white;
+     margin-top: 1rem;
+}
+
+.spending {
+    color: var(--darkBrown);
+    margin-bottom: -1rem;
+}
+
+.barChart {
+    height: 10rem;
+    border-bottom: 1px solid rgb(180, 180, 180);
+    padding-bottom: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: flex;
+    align-content: flex-end;
+}
+
+.bar {
+    position: absolute;
+    bottom: 30px;
+    width: 36px;
+    height: 60px;
+    border-radius: 0.25rem;
+    background-color: var(--softRed);
+}
+
+.bar:hover {
+    cursor: pointer;
+    opacity: 75%;
+}
+
+.day {
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.8rem;
+}
+
+.value {
+    position: absolute;
+    padding: 0.25rem;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+    background-color: var(--darkBrown);
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.balanceWrapper {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    justify-content: center;
+}
+
+.percentageWrapper {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: right;
+}
+
+.balanceFooter {
+    color: grey;
+}
+
+.balanceValueFooter {
+    color: var(--darkBrown);
+    font-size: 2rem;
+}
+
+.percentage {
+    color: black;
+    font-weight: 700;
+}
